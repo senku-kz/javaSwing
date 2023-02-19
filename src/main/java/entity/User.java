@@ -1,23 +1,23 @@
 package entity;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
-@Getter
-@Setter
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Entity
+@Table(name = "users")
 public class User {
+    @Id
     private String iin;
     private String password;
     private String surname;
     private String firstname;
     private String patronymic;
 
-
-    public User(String iin, String password, String surname, String firstname, String patronymic) {
-        this.iin = iin;
-        this.password = password;
-        this.surname = surname;
-        this.firstname = firstname;
-        this.patronymic = patronymic;
-    }
 }

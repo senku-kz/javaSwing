@@ -1316,25 +1316,57 @@
     <table id="482" parent="166" name="sqlite_master">
       <System>1</System>
     </table>
-    <column id="483" parent="482" name="type">
+    <table id="483" parent="166" name="users"/>
+    <column id="484" parent="482" name="type">
       <DasType>TEXT|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="484" parent="482" name="name">
+    <column id="485" parent="482" name="name">
       <DasType>TEXT|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="485" parent="482" name="tbl_name">
+    <column id="486" parent="482" name="tbl_name">
       <DasType>TEXT|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="486" parent="482" name="rootpage">
+    <column id="487" parent="482" name="rootpage">
       <DasType>INT|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="487" parent="482" name="sql">
+    <column id="488" parent="482" name="sql">
       <DasType>TEXT|0s</DasType>
       <Position>5</Position>
     </column>
+    <column id="489" parent="483" name="iin">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="490" parent="483" name="firstname">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="491" parent="483" name="password">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="492" parent="483" name="patronymic">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="493" parent="483" name="surname">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <index id="494" parent="483" name="sqlite_autoindex_users_1">
+      <ColNames>iin</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <key id="495" parent="483">
+      <ColNames>iin</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_users_1</UnderlyingIndexName>
+    </key>
   </database-model>
 </dataSource>
